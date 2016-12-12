@@ -31,6 +31,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <cdi.version>1.2</cdi.version>
         <servlet.version>3.1.0</servlet.version>
 
         <jackson.version>2.6.3</jackson.version>
@@ -82,6 +83,13 @@
                 <version>${deltaspike.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.enterprise</groupId>
+                <artifactId>cdi-api</artifactId>
+                <version>${cdi.version}</version>
+                <scope>compile</scope>
             </dependency>
 
             <dependency>
@@ -161,7 +169,7 @@
                 <groupId>org.apache.deltaspike.cdictrl</groupId>
                 <artifactId>deltaspike-cdictrl-servlet</artifactId>
                 <version>${deltaspike.version}</version>
-                <scope>provided</scope>
+                <scope>compile</scope>
             </dependency>
 
             <!-- Weld dependencies -->
