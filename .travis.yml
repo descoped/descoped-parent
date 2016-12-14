@@ -6,7 +6,8 @@ before_install:
 install:
   echo 'Skipping install step for Maven project'
 script:
-  mvn clean install
+  mvn clean install deploy --settings target/travis/settings.xml
+  mvn clean test -Dmaven.javadoc.skip=true -B -V
 branches:
   except:
     - travis
