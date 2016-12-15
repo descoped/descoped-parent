@@ -7,3 +7,4 @@
 *.iml
 
 release.properties
+pom.xml.*
