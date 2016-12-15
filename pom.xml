@@ -23,7 +23,7 @@
     <distributionManagement>
         <repository>
             <id>descoped</id>
-            <name>Descoped Snapshots</name>
+            <name>Descoped Releases</name>
             <url>https://repository.musific.com/nexus/content/repositories/descoped/</url>
         </repository>
         <snapshotRepository>
