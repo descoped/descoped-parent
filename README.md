@@ -1,6 +1,6 @@
-# descoped-parent
+# Descoped Parent POM
 
-Descoped Parent POM
+[![Build Status](https://travis-ci.org/descoped/descoped-parent.svg?branch=master)](https://travis-ci.org/descoped/descoped-parent)
 
 mvn clean deploy for snapshots
 
