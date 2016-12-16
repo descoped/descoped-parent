@@ -3,7 +3,7 @@
     <groupId>io.descoped</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>1</version>
+    <version>1-SNAPSHOT</version>
     <name>Descoped Parent</name>
     <url>http://www.descoped.io</url>
 
