@@ -2,15 +2,11 @@
 
 [![Build Status](https://travis-ci.org/descoped/descoped-parent.svg?branch=master)](https://travis-ci.org/descoped/descoped-parent)
 
+Repo is configured with AllowRedeploy that fixes 400 bad request.
+
 mvn clean deploy for snapshots
 
-mvn release:clean release:prepare release:perform -DreleaseVersion=1 -DdevelopmentVersion=1-SNAPSHOT
-
-Repo must be be configured with AllowRedeploy
-
-Travis-CI and secret must be fixed, then snapshots will be deployed for each build
-
-Then figure out how to use Maven Central. Not a priority, but may be useful in the future.
+mvn release:clean release:prepare release:perform -DreleaseVersion=1 -DdevelopmentVersion=2-SNAPSHOT
 
 git config --global credential.helper osxkeychain
 ssh-add -K
