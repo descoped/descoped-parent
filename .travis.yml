@@ -5,7 +5,7 @@ notifications:
     secure: k3yyWHpMismLok/4nlnVUObeerA+zZRl/EPjL7rtmbwMB4Q6m4X1lPUjYVyYjXWAtUF5U5VjY5ORTf6pmXS0BnJ4fS/t3n7KJ0n7eL7Rphwq9UGWexXQ3KD2pDLL2Py29KZwprsYfqE+7CLo7To4anC9CY4reLxSXjy8a6WZ70RrBWlrZRYWq9cbxtCTFknHucVY1okApoS2DK8ZTYLnLxmzFXpktciDPHedzGLLJWM03JZSeOxok4N9/xPKHVIIffDcPzCjOyzzpqHEcJ846G2DLfX05kL1Y1kGnlku4MP3Vbx+qiqQKR2P7SL/nGyd2hJgqjKgeVlGX8fo7oZXdRA6iNCAkH9UnJ0KZA1OKA2h0DW3te2hhDsqeJzk0ka2GcvLrrpMlc1BG09Ssr2fbHbPc2UmyIFg7shLgS4b26wK7Fd2ecSvhLmZ/wTwMLlL4iakabaL6d7sFq9KGeCkQodqpzOxlgeltPszqrEpqIPCarMSwILaqedaHVoG4WXuIlPDHt8JnGK6xKnYynBJTvjcIL+w+sx07WD0HnNg2RDibY3bKu52RJf83XN5VWTrXarLGfN3h1lnwT7zsAJLoyKwk1Yikkmvs15Gk+rTT7szNOkXgwhHHCA9WIGraxKWsyqEvi7h1IJIZ0hRWgsGtO0X/3DeBdY04B4hP/20WdI=
 jdk:
 - oraclejdk8
-install: echo 'Run Maven Tests'
+install: echo 'Build POM and Deploy'
 script: mvn clean install -Dmaven.javadoc.skip=true -B -V
 after_success: mvn deploy --settings .travis/settings.xml -DskipTests -B -V
 branches:
