@@ -76,7 +76,7 @@
         <repository>
             <id>musific-public-repository-group</id>
             <name>Musific Public Maven Repository Group</name>
-            <url>http://musific.com/nexus/content/groups/public/</url>
+            <url>https://repository.musific.com/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
