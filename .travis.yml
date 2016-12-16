@@ -6,9 +6,8 @@ notifications:
 jdk:
 - oraclejdk8
 install: echo 'Run Maven Tests'
-  script: mvn clean install -Dmaven.javadoc.skip=true -B -V
-after_success:
-  script: mvn deploy -DskipTests -B -V
+script: mvn clean install -Dmaven.javadoc.skip=true -B -V
+after_success: mvn deploy -DskipTests -B -V
 branches:
   only:
   - master
