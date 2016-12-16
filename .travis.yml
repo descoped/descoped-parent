@@ -1,15 +1,14 @@
 language: java
+notifications:
+  slack:
+    secure: SS0SUx/JlhoT40grWelualilr6sISJgsMF8G0X57LZW9lqoPeeSyeHglzuWfV5Z6TFBEdrxzNWQzQSCl3OBYemVfmn7cmwQgHXmVw+GABtnpT7/GnYeBD2u489WxQcoMvHXbsCwlV1xGVItFe9H0jBoL3O8QTmQXZCriYUgCfEEmBsXFh2qnWGI9izB/aYHH4ev9Zd6lSzMex3szJTk/lFQxLaDhUywxWlMB1dF/rtZ3iozbSAkiiGmaa8TWauUEchkmb6SuvNqPH3r/kc/tnOJz8shJFygWlYjsjAtTYokW5CGsaKYqe7ixGuy+oDN/IxZIhh6rmElzRGGHLAWMu0XVodAi1eOe0rUzo4vKKWPqWTUqHR1LBLXLdBDRygjNkvyeqqIdOzsgvNLTHbk/zZg4fltZqHPjm/oL0498LPv/VXRvm27YSY/+7f2Gv9gIfzcLXo/jlFHH0ZX/uDEBQAuzc9nUIqcQLxX79d1mIHZV5nJwTp1hOA6j5/twPY5NX8xaTZt1/1KjegIblLiV3iHGImYxJrwIzER0L7mvaDUYTP488caQLyZI+D2EbYAXg9OE9hlXT+Ox8cLU7/erJspjEJciJxXPFEwwVLSmp606J7mkRKOGU+ROB947Qzt37l/nkC6nQYY0d5YKehBIHvnGH4B/elBCqtG9E4VOMVg=
 jdk:
 - oraclejdk8
-#before_install:
-#  git clone -b travis `git config --get remote.origin.url` target/travis
-install:
-  echo 'Skipping install step for Maven project'
-script:
-  mvn clean test -Dmaven.javadoc.skip=true -B -V
+install: echo 'Skipping install step for Maven project'
+script: mvn clean test -Dmaven.javadoc.skip=true -B -V
 branches:
   except:
-    - travis
+  - travis
 cache:
   directories:
-    - '$HOME/.m2/repository'
+  - "$HOME/.m2/repository"
