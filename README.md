@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/descoped/descoped-parent.svg?branch=master)](https://travis-ci.org/descoped/descoped-parent)
 
+The Descoped Parent POM implements basic support for other descoped projects and release management.
+
+### Notes
+
 Repo is configured with AllowRedeploy that fixes 400 bad request.
 
 mvn clean deploy for snapshots
