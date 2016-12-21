@@ -247,15 +247,16 @@
                 <artifactId>jersey-container-servlet</artifactId>
                 <version>${jersey.version}</version>
                 <scope>compile</scope>
-                <!--
                 <exclusions>
                     <exclusion>
                         <groupId>javax.validation</groupId>
                         <artifactId>validation-api</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.glassfish.hk2.external</groupId>
+                        <artifactId>javax.inject</artifactId>
+                    </exclusion>
                 </exclusions>
-
-                -->
             </dependency>
 
             <dependency>
