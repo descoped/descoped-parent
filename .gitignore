@@ -8,3 +8,5 @@
 
 release.properties
 pom.xml.*
+/pom.xml.releaseBackup
+/release.properties
