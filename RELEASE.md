@@ -29,11 +29,13 @@ On MacOS, Git will prompt you for password repeatedly. A solution is to add git 
 * `git config --global credential.helper osxkeychain`
 * `ssh-add -K`
 
-## Snapshot Deployment
+## Do Snapshot
+
+`git pull`
 
 `mvn clean deploy for snapshots`
 
-## Release Deployment
+## Do Release
 
 Make sure all pre-requisites and that all files are committed before you release.
 
