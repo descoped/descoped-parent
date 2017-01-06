@@ -57,7 +57,7 @@ Make sure all files are up-to-date.
 
 `travis encrypt "<slackgroup>:<secret>" --add notifications.slack`
 
-`travis encrypt <env>=<user>`
-`travis encrypt <env>=<pwd>`
+`travis encrypt CI_NEXUS_USER=<user> --add`
+`travis encrypt CI_NEXUS_PWD=<pwd> --add`
 
 
