@@ -52,3 +52,12 @@ Make sure all files are up-to-date.
 `git pull`
 
 `git status`
+
+## Travis
+
+`travis encrypt "<slackgroup>:<secret>" --add notifications.slack`
+
+`travis encrypt <env>=<user>`
+`travis encrypt <env>=<pwd>`
+
+
