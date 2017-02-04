@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.descoped</groupId>
     <artifactId>parent</artifactId>
@@ -60,6 +61,7 @@
         <hystrix.version>1.5.9</hystrix.version>
 
         <weld.version>2.4.2.Final</weld.version>
+        <weld.jboss.classfilewriter.version>1.2.1.Final</weld.jboss.classfilewriter.version>
         <deltaspike.version>1.7.2</deltaspike.version>
 
         <junit.version>4.12</junit.version>
@@ -224,6 +226,13 @@
                         <artifactId>jboss-interceptors-api_1.2_spec</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.classfilewriter</groupId>
+                <artifactId>jboss-classfilewriter</artifactId>
+                <version>${weld.jboss.classfilewriter.version}</version>
+                <scope>compile</scope>
             </dependency>
 
             <!-- Jersey and Jackson -->
