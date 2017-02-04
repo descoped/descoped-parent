@@ -59,7 +59,7 @@
 
         <hystrix.version>1.5.9</hystrix.version>
 
-        <weld.version>2.4.1.Final</weld.version>
+        <weld.version>2.4.2.Final</weld.version>
         <deltaspike.version>1.7.2</deltaspike.version>
 
         <junit.version>4.12</junit.version>
