@@ -1,10 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.descoped</groupId>
     <artifactId>parent</artifactId>
-    <packaging>pom</packaging>
     <version>3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <name>Descoped Parent</name>
     <url>http://www.descoped.io</url>
 
@@ -46,23 +48,31 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <javaee.web.api>7.0</javaee.web.api>
+        <javax.inject.version>1</javax.inject.version>
         <cdi.version>1.2</cdi.version>
+        <javax.annotation.version>1.2</javax.annotation.version>
+        <javax.el.version>3.0.0</javax.el.version>
+        <javax.interceptor.version>1.2</javax.interceptor.version>
         <servlet.version>3.1.0</servlet.version>
-
-        <jackson.version>2.8.4</jackson.version>
-        <jersey.version>2.25</jersey.version>
-        <jayway.version>2.2.0</jayway.version>
-        <org.json.version>20160810</org.json.version>
-        <kevinsawicki.version>6.0</kevinsawicki.version>
-
-        <slf4j.version>1.7.22</slf4j.version>
-        <logback.version>1.1.8</logback.version>
-
-        <hystrix.version>1.5.9</hystrix.version>
 
         <weld.version>2.4.2.Final</weld.version>
         <weld.jboss.classfilewriter.version>1.2.1.Final</weld.jboss.classfilewriter.version>
+        <owb.version>1.7.1</owb.version>
         <deltaspike.version>1.7.2</deltaspike.version>
+
+        <jandex.version>2.0.3.Final</jandex.version>
+
+        <!--<jackson.version>2.8.4</jackson.version>-->
+        <!--<jersey.version>2.25</jersey.version>-->
+        <!--<jayway.version>2.2.0</jayway.version>-->
+        <!--<org.json.version>20160810</org.json.version>-->
+        <!--<kevinsawicki.version>6.0</kevinsawicki.version>-->
+
+        <!--<slf4j.version>1.7.22</slf4j.version>-->
+        <!--<logback.version>1.1.8</logback.version>-->
+
+        <!--<hystrix.version>1.5.9</hystrix.version>-->
+
 
         <junit.version>4.12</junit.version>
         <testng.version>6.9.12</testng.version>
@@ -135,80 +145,6 @@
                 <scope>compile</scope>
             </dependency>
 
-            <!-- DeltaSpike Deps -->
-
-            <dependency>
-                <groupId>org.apache.deltaspike.core</groupId>
-                <artifactId>deltaspike-core-api</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>compile</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.core</groupId>
-                <artifactId>deltaspike-core-impl</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>runtime</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-security-module-api</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>compile</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-security-module-impl</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>runtime</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-servlet-module-api</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>compile</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-servlet-module-impl</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>runtime</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-test-control-module-api</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.modules</groupId>
-                <artifactId>deltaspike-test-control-module-impl</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- DeltaSpike dependencies for Java-SE -->
-
-            <dependency>
-                <groupId>org.apache.deltaspike.cdictrl</groupId>
-                <artifactId>deltaspike-cdictrl-weld</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>runtime</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.deltaspike.cdictrl</groupId>
-                <artifactId>deltaspike-cdictrl-servlet</artifactId>
-                <version>${deltaspike.version}</version>
-                <scope>compile</scope>
-            </dependency>
-
             <!-- Weld dependencies -->
 
             <dependency>
@@ -225,6 +161,10 @@
                         <groupId>org.jboss.spec.javax.interceptor</groupId>
                         <artifactId>jboss-interceptors-api_1.2_spec</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.spec.javax.annotation</groupId>
+                        <artifactId>jboss-annotations-api_1.2_spec</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -235,7 +175,7 @@
                 <scope>compile</scope>
             </dependency>
 
-            <!-- Jersey and Jackson -->
+            <!-- Jersey and Jackson
 
             <dependency>
                 <groupId>org.glassfish.jersey.containers</groupId>
@@ -301,8 +241,9 @@
                 <version>${org.json.version}</version>
                 <scope>compile</scope>
             </dependency>
+            -->
 
-            <!-- hystrix-->
+            <!-- hystrix
 
             <dependency>
                 <groupId>com.netflix.hystrix</groupId>
@@ -316,8 +257,9 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            -->
 
-            <!-- KevinSawicki URL HTTP -->
+            <!-- KevinSawicki URL HTTP
 
             <dependency>
                 <groupId>com.github.kevinsawicki</groupId>
@@ -325,8 +267,9 @@
                 <version>${kevinsawicki.version}</version>
                 <scope>compile</scope>
             </dependency>
+            -->
 
-            <!-- Logger -->
+            <!-- Logger
 
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -362,6 +305,7 @@
                 <version>${logback.version}</version>
                 <scope>compile</scope>
             </dependency>
+            -->
 
 
             <!-- Test -->
