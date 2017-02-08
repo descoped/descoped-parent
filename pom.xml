@@ -61,6 +61,7 @@
         <deltaspike.version>1.7.2</deltaspike.version>
 
         <jandex.version>2.0.3.Final</jandex.version>
+        <location.to.index.dir>/tmp/jandex</location.to.index.dir>
 
         <!--<jackson.version>2.8.4</jackson.version>-->
         <!--<jersey.version>2.25</jersey.version>-->
