@@ -113,6 +113,8 @@
     <dependencyManagement>
         <dependencies>
             <!-- JavaEE WebProfile -->
+            <!-- https://repo1.maven.org/maven2/javax/javaee-web-api/7.0/javaee-web-api-7.0.pom -->
+            <!-- https://repo1.maven.org/maven2/org/jboss/spec/jboss-javaee-7.0/1.1.0.Beta1/jboss-javaee-7.0-1.1.0.Beta1.pom -->
             <!-- https://glassfish.java.net/wiki-archive/Java%20EE%207%20Maven%20Coordinates.html -->
             <dependency>
                 <groupId>javax</groupId>
