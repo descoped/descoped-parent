@@ -45,6 +45,20 @@ Make sure all files are up-to-date.
 
 `mvn release:clean release:prepare release:perform -DreleaseVersion=1.0.0 -DdevelopmentVersion=1.0.1-SNAPSHOT`
 
+### Project checklist order:
+
+* parent
+* descoped-logger
+* descoped-container
+* descoped-testutils
+* descoped-support
+* descoped-web
+* descoped-rest
+* descoped-mvc
+* descoped-hystrix-http
+* mojo
+
+
 ### Revert when something goes wrong
 
 `git reset --hard origin/master`
