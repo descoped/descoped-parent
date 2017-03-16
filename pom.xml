@@ -79,9 +79,9 @@
 
     <repositories>
         <repository>
-            <id>musific-public-repository-group</id>
-            <name>Musific Public Maven Repository Group</name>
-            <url>https://repository.musific.com/nexus/content/groups/public/</url>
+            <id>descoped</id>
+            <name>Descoped Public Maven Repository Group</name>
+            <url>https://repository.descoped.io/repository/descoped/</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -95,9 +95,9 @@
 
     <pluginRepositories>
         <pluginRepository>
-            <id>musific-public-repository</id>
+            <id>descoped-snapshots</id>
             <name>Musific Public Maven Repository Group</name>
-            <url>https://repository.musific.com/nexus/content/groups/public/</url>
+            <url>https://repository.descoped.io/repository/descoped-snapshots/</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
