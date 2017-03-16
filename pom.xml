@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.descoped</groupId>
     <artifactId>parent</artifactId>
-    <version>5-SNAPSHOT</version>
+    <version>5</version>
     <packaging>pom</packaging>
 
     <name>Descoped Parent</name>
@@ -39,7 +39,7 @@
         <url>http://www.descoped.io</url>
         <connection>scm:git:git://github.com/descoped/descoped-parent.git</connection>
         <developerConnection>scm:git:git@github.com:descoped/descoped-parent.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v5</tag>
     </scm>
 
     <properties>
