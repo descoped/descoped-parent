@@ -1,0 +1,10 @@
+{
+  "id": "descoped-parent",
+  "name": "Parent",
+  "pages": [
+    {
+      "group": "default",
+      "uri": "README.md"
+    }
+  ]
+}
